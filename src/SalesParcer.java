@@ -29,8 +29,7 @@ public class SalesParcer {
                                 totalDaySales += Double.parseDouble(value_split[5]);
 
                             }else{
-                                System.out.println(clientId +","+ storeId  
-                                        +","+ businessDay +","+ totalDaySales);
+                                System.out.printf("%d,%d,%s,$%.2f\n", clientId,storeId,businessDay, totalDaySales);
                                 storeId = Integer.parseInt(value_split[2]);
                                 businessDay = value_split[3];
                                 totalDaySales = Double.parseDouble(value_split[5]);
@@ -38,11 +37,12 @@ public class SalesParcer {
                             }
 
                         }
-                    System.out.println(clientId +","+ storeId 
-                                        +","+ businessDay +","+ totalDaySales);
+                    System.out.printf("%d,%d,%s,$%.2f\n", clientId,storeId,businessDay, totalDaySales);
+                    
 		}
 		catch (IOException ioe) {
 			System.out.println(ioe.getMessage());
 		}
 	}
+
 }
